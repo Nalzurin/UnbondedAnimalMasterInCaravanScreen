@@ -50,11 +50,11 @@ namespace AnimalMasterCaravan
             {
                 return;
             }
-            Log.Message(pawn.Label);
+           /* Log.Message(pawn.Label);
             Log.Message(pawn.RaceProps.Animal);
             Log.Message(pawn.relations.GetFirstDirectRelationPawn(PawnRelationDefOf.Bond) == null);
-            Log.Message(pawn.playerSettings.Master != null);
-            if (pawn.RaceProps.Animal && pawn.relations.GetFirstDirectRelationPawn(PawnRelationDefOf.Bond) == null && pawn.playerSettings.Master != null)
+            Log.Message(pawn.playerSettings.Master != null);*/
+            if (pawn.RaceProps.Animal && pawn.relations.GetFirstDirectRelationPawn(PawnRelationDefOf.Bond) == null && pawn.playerSettings != null && pawn.playerSettings.Master != null)
             {
                 AnimalMasterCaravanUtil.DrawMasterIcon(pawn, new Rect(curX - 24f, (rect.height - 24f) / 2f, 24f, 24f));
                 curX -= 24f;
